@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
   Name: hello-world
+  namespace: argo-workflows
 spec:
   entrypoint: hello
   templates:
