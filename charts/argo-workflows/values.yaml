@@ -53,6 +53,7 @@ singleNamespace: false
 
 workflow:
   # -- Deprecated; use controller.workflowNamespaces instead.
+  enabled: true
   namespace:
   serviceAccount:
     # -- Specifies whether a service account should be created
