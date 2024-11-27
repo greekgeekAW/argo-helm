@@ -4,6 +4,10 @@ server:
     - --auth-mode=server
     - --no-auth
 
+  # Add GKE managed certificate configuration
+  GKEmanagedCertificate:
+    enabled: false  # Disable GKE managed certificate if not needed
+
   # Disable default authentication methods
   authModes:
     client: false
@@ -32,11 +36,9 @@ sso:
 useDefaultArtifactRepo: false
 useStaticCredentials: false
 
-# Optional but recommended: Configure service type
 service:
-  type: ClusterIP  # Change to NodePort or LoadBalancer based on your needs
+  type: ClusterIP
 
-# Persistence configuration (optional)
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
